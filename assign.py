@@ -24,29 +24,17 @@ def main():
                 toppings_price_small = pizza_toppings * constants.TOPPINGS_SMALL
             elif pizza_toppings == 4:
                 toppings_price_small = pizza_toppings * constants.TOPPINGS_SMALL
-            
 
-        # Get amount of drinks from user
-        amount_of_drinks = input("How many drinks do you want: ")
-        try:
-            amount_of_drinks_int = int(amount_of_drinks)
-            if amount_of_drinks_int > 0:
-                #Calculate cost of drinks
-                cost_of_drinks = amount_of_drinks_int * constants.DRINKS
-                # Calculate subtotal
-                pizza_small_subtotal = constants.SMALL_COST + toppings_price_small + cost_of_drinks
-            else:
+                # Calculate subtotal of the pizza
                 pizza_small_subtotal = constants.SMALL_COST + toppings_price_small
                 # Calculate tax total
                 pizza_small_tax_cost = pizza_small_subtotal * constants.HST
                 # Calculate total cost of small pizza
                 pizza_small_total_cost = pizza_small_subtotal + pizza_small_tax_cost
                 # Display subtotal, tax and total cost of pizza to user
-                print("The subtotal of your pizza and drinks is {:.2f}".format(pizza_small_subtotal))
+                print("The subtotal of your pizza and is {:.2f}".format(pizza_small_subtotal))
                 print("The total cost of tax is {:.2f}".format(pizza_small_tax_cost))
-                print("The total cost of your pizza and drinks is {:.2f}".format(pizza_small_total_cost))
-        except:
-            print("{} is not a valid number".format(amount_of_drinks))
+                print("The total cost of your pizza is {:.2f}".format(pizza_small_total_cost))
     except:
         print("{} is not a valid size".format(pizza_size))
 
