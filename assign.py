@@ -9,7 +9,7 @@ import constants
 
 def main():
     # Get size of pizza from the user
-    pizza_size = input("Enter the size of pizza (1 = Small 2 = Medium" " 3 = Large): ")
+    pizza_size = input("Hello, welcome to Brysons pizza shop! Enter the size of pizza (1 = Small 2 = Medium" " 3 = Large): ")
     # See if order inputted is a string
     try:
         pizza_size_int = int(pizza_size)
